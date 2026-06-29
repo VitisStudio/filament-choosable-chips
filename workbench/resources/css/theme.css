@@ -1,0 +1,11 @@
+/* Workbench-only preview theme. Compiles Filament's component CSS so the
+   demo page renders with real badge/field styling. Not shipped in the package. */
+@import 'tailwindcss';
+
+@import '../../../vendor/filament/support/resources/css/index.css';
+@import '../../../vendor/filament/forms/resources/css/index.css';
+@import '../../../vendor/filament/schemas/resources/css/index.css';
+
+/* Scan the package + workbench blade for utility classes used in markup. */
+@source '../../../resources/views';
+@source '../views';

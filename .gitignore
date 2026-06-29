@@ -4,6 +4,7 @@ composer.lock
 
 # Frontend Assets
 /node_modules
+/package-lock.json
 
 # Logs
 npm-debug.log
@@ -30,3 +31,6 @@ phpstan.neon
 testbench.yaml
 /docs
 /coverage
+
+# Playwright MCP
+/.playwright-mcp
