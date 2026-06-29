@@ -130,6 +130,30 @@ ChoosableChips::make('sizes')
 
 ![Check on selected](art/check-selected.png)
 
+### Sizes
+
+Set the chip size with `->size()`, passing a `Size` enum (or its string value). The default is `Size::Medium`. Filament's badge styles only render `xs` and `sm` distinctly — `md`, `lg`, and `xl` share the base size.
+
+```php
+use Filament\Support\Enums\Size;
+
+ChoosableChips::make('a')->size(Size::ExtraSmall);   // or ->size('xs')
+ChoosableChips::make('b')->size(Size::Small);        // or ->size('sm')
+ChoosableChips::make('c')->size(Size::Medium);       // default
+```
+
+To change the size for every chip field at once, set a default in a service provider:
+
+```php
+use VitisStudio\FilamentChoosableChips\Forms\Components\ChoosableChips;
+
+ChoosableChips::configureUsing(fn (ChoosableChips $component) => $component->size('sm'));
+```
+
+![Extra small chips](art/size-xs.png)
+![Small chips](art/size-sm.png)
+![Medium chips](art/size-md.png)
+
 ### Enums
 
 Pass a backed enum to `options()`. Labels, colors, and icons are read automatically from the enum when it implements Filament's `HasLabel`, `HasColor`, and `HasIcon` contracts:

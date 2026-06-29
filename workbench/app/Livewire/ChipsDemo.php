@@ -5,6 +5,7 @@ namespace Workbench\App\Livewire;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Schemas\Schema;
+use Filament\Support\Enums\Size;
 use Filament\Support\Icons\Heroicon;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
@@ -26,6 +27,9 @@ class ChipsDemo extends Component implements HasForms
             'tags' => ['blue', 'purple'],
             'plan' => 'pro',
             'sizes' => ['sm', 'lg'],
+            'size_xs' => ['one', 'two'],
+            'size_sm' => ['one', 'two'],
+            'size_md' => ['one', 'two'],
         ]);
     }
 
@@ -107,6 +111,24 @@ class ChipsDemo extends Component implements HasForms
                         'lg' => 'L',
                         'xl' => 'XL',
                     ]),
+
+                ChoosableChips::make('size_xs')
+                    ->label('->size(Size::ExtraSmall)')
+                    ->multiple()
+                    ->size(Size::ExtraSmall)
+                    ->options(['one' => 'One', 'two' => 'Two', 'three' => 'Three']),
+
+                ChoosableChips::make('size_sm')
+                    ->label('->size(Size::Small)')
+                    ->multiple()
+                    ->size(Size::Small)
+                    ->options(['one' => 'One', 'two' => 'Two', 'three' => 'Three']),
+
+                ChoosableChips::make('size_md')
+                    ->label('->size(Size::Medium) — default')
+                    ->multiple()
+                    ->size(Size::Medium)
+                    ->options(['one' => 'One', 'two' => 'Two', 'three' => 'Three']),
             ]);
     }
 
