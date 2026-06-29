@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace VitisStudio\FilamentChoosableChips\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FilamentChoosableChipsCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'filament-choosable-chips';
 
     public $description = 'My command';
 
