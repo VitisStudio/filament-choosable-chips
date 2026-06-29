@@ -114,13 +114,13 @@ ChoosableChips::make('plan')
 
 ### Check on selected
 
-Call `->checkSelected()` to prepend a check mark to selected chips. The check is colored with `->selectedColor()` (defaults to `primary`). When you don't configure `checkSelected()` explicitly, it turns on automatically for fields that have no per-option `icons()`, so it never collides with a leading icon. While the check is shown it replaces the dismiss × (the check already signals selection, and clicking the chip clears it):
+Call `->checkSelected()` to prepend a check mark to selected chips. The check is colored with `->selectedColor()` (defaults to `success`). When you don't configure `checkSelected()` explicitly, it turns on automatically for fields that have no per-option `icons()`, so it never collides with a leading icon. While the check is shown it replaces the dismiss × (the check already signals selection, and clicking the chip clears it):
 
 ```php
 ChoosableChips::make('sizes')
     ->multiple()
     ->checkSelected()                 // also auto-on when no icons() are set
-    ->selectedColor('primary')        // color of the check (default: primary)
+    ->selectedColor('success')        // color of the check (default: success)
     ->options([
         'sm' => 'S',
         'md' => 'M',
@@ -151,7 +151,7 @@ ChoosableChips::make('status')
 | `disableOptionWhen(Closure)` | Disable specific options; disabled chips can't be selected or removed. |
 | `dismissible(bool \| Closure = true)` | Show a × on selected chips to clear them. Enabled by default, but suppressed while the selected check is shown. |
 | `checkSelected(bool \| Closure = true)` | Prepend a check mark to selected chips. Auto-on when no `icons()` are set. |
-| `selectedColor(string \| Closure \| null)` | Color of the selection check. Defaults to `primary`. |
+| `selectedColor(string \| Closure \| null)` | Color of the selection check. Defaults to `success`. |
 | `checkIcon(string \| BackedEnum \| Closure)` | Icon used to mark selected chips. Defaults to a check mark. |
 | `size(Size \| string \| Closure)` | Badge size (`Size` enum or its string value, e.g. `'sm'`). |
 | `defaultColor(string \| Closure \| null)` | Color used for options with no explicit color. Defaults to `primary`. |

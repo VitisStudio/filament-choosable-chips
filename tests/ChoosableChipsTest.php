@@ -79,8 +79,8 @@ it('lets the selected check be toggled and recolored explicitly', function () {
     expect(ChoosableChips::make('flavor')->checkSelected(false)->isCheckSelected())->toBeFalse();
 });
 
-it('defaults the selected color to primary', function () {
-    expect(ChoosableChips::make('flavor')->getSelectedColor())->toBe('primary');
+it('defaults the selected color to success', function () {
+    expect(ChoosableChips::make('flavor')->getSelectedColor())->toBe('success');
 });
 
 it('renders a check icon on selected chips when enabled', function () {

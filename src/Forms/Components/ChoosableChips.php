@@ -49,7 +49,7 @@ class ChoosableChips extends Field implements Contracts\CanDisableOptions
 
     protected bool|Closure|null $isCheckSelected = null;
 
-    protected string|Closure|null $selectedColor = 'primary';
+    protected string|Closure|null $selectedColor = 'success';
 
     protected string|BackedEnum|Closure $checkIcon = Heroicon::Check;
 
@@ -170,7 +170,7 @@ class ChoosableChips extends Field implements Contracts\CanDisableOptions
     }
 
     /**
-     * Color of the selection check icon. Defaults to the primary color.
+     * Color of the selection check icon. Defaults to the success color.
      */
     public function selectedColor(string|Closure|null $color): static
     {
