@@ -87,25 +87,24 @@
                         'cursor-pointer' => ! $shouldOptionBeDisabled,
                     ])
                 >
-                    <span class="fi-fo-choosable-chips-chip-label inline-flex items-center gap-1">
+                    <span class="fi-fo-choosable-chips-chip-label inline-flex items-center gap-x-1 leading-none">
                         @if ($isCheckSelected)
-                            <span
-                                x-show="isSelected({{ $jsValue }})"
-                                x-cloak
-                                class="fi-fo-choosable-chips-chip-check -ms-0.5 inline-flex shrink-0 items-center"
-                            >
-                                {{
-                                    \Filament\Support\generate_icon_html(
-                                        $checkIcon,
-                                        attributes: (new ComponentAttributeBag)
-                                            ->color(\Filament\Support\View\Components\BadgeComponent::class, $selectedColor),
-                                        size: \Filament\Support\Enums\IconSize::Small,
-                                    )
-                                }}
-                            </span>
+                            {{
+                                \Filament\Support\generate_icon_html(
+                                    $checkIcon,
+                                    attributes: (new ComponentAttributeBag)
+                                        ->color(\Filament\Support\View\Components\BadgeComponent::class, $selectedColor)
+                                        ->class(['fi-fo-choosable-chips-chip-check -ms-0.5'])
+                                        ->merge([
+                                            'x-show' => "isSelected({$jsValue})",
+                                            'x-cloak' => true,
+                                        ], escape: false),
+                                    size: \Filament\Support\Enums\IconSize::ExtraSmall,
+                                )
+                            }}
                         @endif
 
-                        {{ $label }}
+                        <span>{{ $label }}</span>
                     </span>
 
                     @if ($isDismissible && ! $isCheckSelected && ! $shouldOptionBeDisabled)
