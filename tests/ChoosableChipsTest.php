@@ -89,6 +89,16 @@ it('renders a check icon on selected chips when enabled', function () {
         ->assertSeeHtml('fi-fo-choosable-chips-chip-check');
 });
 
+it('hides the dismiss button when the selected check is shown', function () {
+    Livewire::test(ChipsTestComponent::class, ['checkSelected' => true])
+        ->assertOk()
+        ->assertDontSeeHtml('fi-badge-delete-btn');
+
+    Livewire::test(ChipsTestComponent::class, ['checkSelected' => false])
+        ->assertOk()
+        ->assertSeeHtml('fi-badge-delete-btn');
+});
+
 it('renders each option as a badge chip', function () {
     Livewire::test(ChipsTestComponent::class)
         ->assertOk()

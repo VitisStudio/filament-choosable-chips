@@ -114,7 +114,7 @@ ChoosableChips::make('plan')
 
 ### Check on selected
 
-Call `->checkSelected()` to prepend a check mark to selected chips. The check is colored with `->selectedColor()` (defaults to `primary`). When you don't configure `checkSelected()` explicitly, it turns on automatically for fields that have no per-option `icons()`, so it never collides with a leading icon:
+Call `->checkSelected()` to prepend a check mark to selected chips. The check is colored with `->selectedColor()` (defaults to `primary`). When you don't configure `checkSelected()` explicitly, it turns on automatically for fields that have no per-option `icons()`, so it never collides with a leading icon. While the check is shown it replaces the dismiss × (the check already signals selection, and clicking the chip clears it):
 
 ```php
 ChoosableChips::make('sizes')
@@ -149,7 +149,7 @@ ChoosableChips::make('status')
 | `icons(array \| Arrayable \| Closure)` | Per-option icon map keyed by value (`Heroicon` or icon name). |
 | `descriptions(array \| Arrayable \| Closure)` | Per-option helper text keyed by value. |
 | `disableOptionWhen(Closure)` | Disable specific options; disabled chips can't be selected or removed. |
-| `dismissible(bool \| Closure = true)` | Show a × on selected chips to clear them. Enabled by default. |
+| `dismissible(bool \| Closure = true)` | Show a × on selected chips to clear them. Enabled by default, but suppressed while the selected check is shown. |
 | `checkSelected(bool \| Closure = true)` | Prepend a check mark to selected chips. Auto-on when no `icons()` are set. |
 | `selectedColor(string \| Closure \| null)` | Color of the selection check. Defaults to `primary`. |
 | `checkIcon(string \| BackedEnum \| Closure)` | Icon used to mark selected chips. Defaults to a check mark. |

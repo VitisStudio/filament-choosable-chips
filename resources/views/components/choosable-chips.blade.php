@@ -87,26 +87,28 @@
                         'cursor-pointer' => ! $shouldOptionBeDisabled,
                     ])
                 >
-                    @if ($isCheckSelected)
-                        <span
-                            x-show="isSelected({{ $jsValue }})"
-                            x-cloak
-                            class="fi-fo-choosable-chips-chip-check -ms-0.5 inline-flex"
-                        >
-                            {{
-                                \Filament\Support\generate_icon_html(
-                                    $checkIcon,
-                                    attributes: (new ComponentAttributeBag)
-                                        ->color(\Filament\Support\View\Components\BadgeComponent::class, $selectedColor),
-                                    size: \Filament\Support\Enums\IconSize::Small,
-                                )
-                            }}
-                        </span>
-                    @endif
+                    <span class="fi-fo-choosable-chips-chip-label inline-flex items-center gap-1">
+                        @if ($isCheckSelected)
+                            <span
+                                x-show="isSelected({{ $jsValue }})"
+                                x-cloak
+                                class="fi-fo-choosable-chips-chip-check -ms-0.5 inline-flex shrink-0 items-center"
+                            >
+                                {{
+                                    \Filament\Support\generate_icon_html(
+                                        $checkIcon,
+                                        attributes: (new ComponentAttributeBag)
+                                            ->color(\Filament\Support\View\Components\BadgeComponent::class, $selectedColor),
+                                        size: \Filament\Support\Enums\IconSize::Small,
+                                    )
+                                }}
+                            </span>
+                        @endif
 
-                    {{ $label }}
+                        {{ $label }}
+                    </span>
 
-                    @if ($isDismissible && ! $shouldOptionBeDisabled)
+                    @if ($isDismissible && ! $isCheckSelected && ! $shouldOptionBeDisabled)
                         <x-slot
                             name="deleteButton"
                             label="{{ __('Remove :label', ['label' => $label]) }}"
