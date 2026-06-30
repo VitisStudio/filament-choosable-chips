@@ -1,7 +1,9 @@
 # Choosable Chips for Filament
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/vitisstudio/filament-choosable-chips.svg?style=flat-square)](https://packagist.org/packages/vitisstudio/filament-choosable-chips)
+[![Tests](https://img.shields.io/github/actions/workflow/status/vitisstudio/filament-choosable-chips/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/vitisstudio/filament-choosable-chips/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/vitisstudio/filament-choosable-chips.svg?style=flat-square)](https://packagist.org/packages/vitisstudio/filament-choosable-chips)
+[![License](https://img.shields.io/packagist/l/vitisstudio/filament-choosable-chips.svg?style=flat-square)](LICENSE.md)
 
 A FilamentPHP v5 form field that renders checkbox/radio options as dismissable, colorable, icon-bearing badge **chips**. The API is patterned after `Select`/`ToggleButtons`, so per-option labels, colors, and icons are supplied through the same fluent option map you already know. Each chip is a native Filament badge, so it inherits Filament's theme out of the box.
 
@@ -12,31 +14,36 @@ A FilamentPHP v5 form field that renders checkbox/radio options as dismissable, 
 - **Single or multi select** from one field — radio semantics by default, checkbox semantics with `->multiple()`.
 - **Per-option color, icon, and description**, keyed by option value (same shape as `Select::options()`).
 - **Dismissable chips** using the badge's built-in delete button — click a chip to toggle it, or click the × to clear it.
+- **Selected check marks** with `->checkSelected()`, colored independently of the chip.
 - Reuses the Filament **badge** component and color tokens, so it matches your panel with no extra CSS.
 - Enum support and an `in` validation rule derived from the enabled options, like the built-in option fields.
 
 ## Requirements
 
 - PHP 8.4+
-- `filament/forms` ^5.0
+- Filament v5 (`filament/forms` ^5.0)
 
 ## Installation
 
-Install via Composer:
+Install the package via Composer:
 
 ```bash
 composer require vitisstudio/filament-choosable-chips
 ```
 
-The field renders with Filament's existing badge styles. If you use a [custom theme](https://filamentphp.com/docs/forms/installation#building-themes), register the package views as a Tailwind source so the chip utility classes are compiled:
+That's all that's required — the field uses Filament's existing badge styles, so there is nothing to publish or build for the default look.
+
+If you use a [custom panel theme](https://filamentphp.com/docs/styling/overview#creating-a-custom-theme), register the package views as a Tailwind source in your theme's CSS so the chip utility classes are compiled:
 
 ```css
 @source '../../../../vendor/vitisstudio/filament-choosable-chips/resources/views';
 ```
 
+Then rebuild your theme (`npm run build`).
+
 ## Usage
 
-Single-select (radio semantics) is the default — the field stores a single scalar value:
+Use the field anywhere you build a Filament schema (a resource form, a custom page, a relation manager, an action, etc.). Single-select (radio semantics) is the default — the field stores a single scalar value:
 
 ```php
 use VitisStudio\FilamentChoosableChips\Forms\Components\ChoosableChips;
@@ -181,23 +188,19 @@ ChoosableChips::make('status')
 | `defaultColor(string \| Closure \| null)` | Color used for options with no explicit color. Defaults to `primary`. |
 | `gridDirection(GridDirection \| string \| Closure)` | Lay chips out by column (default) or row. |
 
-## Testing
+## Publishing the views
+
+The default look needs no publishing. To customise the chip markup, publish the view and edit it:
 
 ```bash
-composer test
+php artisan vendor:publish --tag="filament-choosable-chips-views"
 ```
 
-To preview the field in a browser, the package ships a Testbench workbench app:
-
-```bash
-composer serve
-```
+The view is published to `resources/views/vendor/filament-choosable-chips/`.
 
 ## Example app
 
-A full Filament v5 panel using the field lives in [`example/`](example/). It links
-this package via a Composer path repository, so it always runs against your local
-copy. See [example/README.md](example/README.md) for setup; in short:
+A full Filament v5 panel using the field lives in [`example/`](example/). It links this package via a Composer path repository, so it always runs against your local copy. See [example/README.md](example/README.md) for setup; in short:
 
 ```bash
 cd example
@@ -207,9 +210,33 @@ touch database/database.sqlite && php artisan migrate
 php artisan serve
 ```
 
+## Testing
+
+```bash
+composer test
+```
+
+To preview the field in a browser without a full app, the package ships a Testbench workbench app:
+
+```bash
+composer serve
+```
+
+## Upgrading
+
+This package follows [semantic versioning](https://semver.org). Review the [changelog](CHANGELOG.md) before upgrading across a major version.
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability, please email dan@vitis.studio rather than using the issue tracker.
 
 ## Credits
 
