@@ -1,0 +1,7 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+/* Compile the chip field's utility classes from the package views. */
+@source '../../../../vendor/vitisstudio/filament-choosable-chips/resources/views/**/*';

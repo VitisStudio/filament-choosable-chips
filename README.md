@@ -193,6 +193,20 @@ To preview the field in a browser, the package ships a Testbench workbench app:
 composer serve
 ```
 
+## Example app
+
+A full Filament v5 panel using the field lives in [`example/`](example/). It links
+this package via a Composer path repository, so it always runs against your local
+copy. See [example/README.md](example/README.md) for setup; in short:
+
+```bash
+cd example
+composer install && npm install && npm run build
+cp .env.example .env && php artisan key:generate
+touch database/database.sqlite && php artisan migrate
+php artisan serve
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
