@@ -1,0 +1,24 @@
+{
+  "note": "Filament v5 uses the Tailwind v4 OKLCH palette. Both OKLCH (source of truth) and the closest sRGB hex are given. Chips use the 50 shade for fill, 600 for the label text, and a 600/10 ring in light mode.",
+  "accent": {
+    "name": "Filament primary (amber)",
+    "role": "product name / highlight only — NOT the chips",
+    "hex_500": "#f59e0b",
+    "hex_600": "#d97706"
+  },
+  "canvas": {
+    "light": { "page": "#f9fafb", "card": "#ffffff", "text": "#030712" },
+    "dark":  { "page": "#030712", "card": "#111827", "text": "#ffffff" }
+  },
+  "chip_colors": {
+    "info_blue":   { "token": "info",    "label_600": "#2563eb", "fill_50": "#eff6ff", "solid_500": "#3b82f6", "oklch_500": "oklch(0.623 0.214 259.815)" },
+    "danger_red":  { "token": "danger",  "label_600": "#dc2626", "fill_50": "#fef2f2", "solid_500": "#ef4444", "oklch_500": "oklch(0.637 0.237 25.331)" },
+    "success_green":{ "token": "success","label_600": "#16a34a", "fill_50": "#f0fdf4", "solid_500": "#22c55e", "oklch_500": "oklch(0.723 0.219 149.579)" },
+    "warning_amber":{ "token": "warning","label_600": "#d97706", "fill_50": "#fffbeb", "solid_500": "#f59e0b", "oklch_500": "oklch(0.769 0.188 70.08)" },
+    "indigo":      { "token": "indigo",  "label_600": "#4f46e5", "fill_50": "#eef2ff", "solid_500": "#6366f1", "oklch_500": "oklch(0.585 0.233 277.117)" },
+    "purple":      { "token": "purple",  "label_600": "#9333ea", "fill_50": "#faf5ff", "solid_500": "#a855f7", "oklch_500": "oklch(0.627 0.265 303.9)" },
+    "teal":        { "token": "teal",    "label_600": "#0d9488", "fill_50": "#f0fdfa", "solid_500": "#14b8a6", "oklch_500": "oklch(0.704 0.14 182.503)" },
+    "cyan":        { "token": "cyan",    "label_600": "#0891b2", "fill_50": "#ecfeff", "solid_500": "#06b6d4", "oklch_500": "oklch(0.715 0.143 215.221)" },
+    "gray":        { "token": "gray",    "label_600": "#4b5563", "fill_50": "#f9fafb", "solid_500": "#6b7280", "oklch_500": "oklch(0.551 0.027 264.364)" }
+  }
+}

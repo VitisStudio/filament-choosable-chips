@@ -1,0 +1,46 @@
+{
+  "deliverables": [
+    {
+      "id": "thumbnail",
+      "purpose": "Filament plugins-grid card + GitHub social preview",
+      "width": 1200,
+      "height": 675,
+      "aspect": "16:9",
+      "format": ["png", "svg"],
+      "must_read_at_px_wide": 400,
+      "safe_zone_percent": 90,
+      "focal_point": "one clear cluster of colorful chips + product name"
+    },
+    {
+      "id": "hero",
+      "purpose": "README top banner / landing",
+      "width": 2400,
+      "height": 1260,
+      "aspect": "~40:21 wide banner",
+      "format": ["png", "svg"],
+      "focal_point": "chips as hero; tagline and optional code motif allowed"
+    },
+    {
+      "id": "square",
+      "purpose": "optional avatar / square crop of the chip cluster",
+      "width": 800,
+      "height": 800,
+      "aspect": "1:1",
+      "format": ["png"]
+    }
+  ],
+  "chip_style": {
+    "border_radius": "height / 2 (full pill)",
+    "fill": "color-50",
+    "text": "color-600",
+    "ring": "1px, color-600 at ~10% opacity",
+    "padding_x": "generous (~12px at base size)",
+    "font": "clean sans (Inter / Instrument Sans), 12-13px, medium weight",
+    "affordances": ["leading Heroicon (outline)", "trailing x delete", "leading check on selected"]
+  },
+  "typography": {
+    "product_name_font": "geometric/grotesque sans, semibold",
+    "body_font": "same family, regular"
+  },
+  "directions": ["light-product-true", "dark-bold"]
+}
