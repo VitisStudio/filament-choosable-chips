@@ -82,7 +82,7 @@
                     :for="$inputId"
                     x-bind:class="{ 'fi-selected ring-2 ring-offset-1 ring-offset-white dark:ring-offset-gray-900': isSelected({{ $jsValue }}) }"
                     @class([
-                        'fi-fo-choosable-chips-chip select-none transition',
+                        'fi-fo-choosable-chips-chip select-none transition !rounded-full !px-3',
                         'fi-not-allowed opacity-70 cursor-not-allowed' => $shouldOptionBeDisabled,
                         'cursor-pointer' => ! $shouldOptionBeDisabled,
                     ])
