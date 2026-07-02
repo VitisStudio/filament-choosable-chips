@@ -1,5 +1,7 @@
 # Choosable Chips for Filament
 
+![Choosable Chips for Filament](art/hero.jpg)
+
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/vitisstudio/filament-choosable-chips.svg?style=flat-square)](https://packagist.org/packages/vitisstudio/filament-choosable-chips)
 [![Tests](https://img.shields.io/github/actions/workflow/status/vitisstudio/filament-choosable-chips/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/vitisstudio/filament-choosable-chips/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/vitisstudio/filament-choosable-chips.svg?style=flat-square)](https://packagist.org/packages/vitisstudio/filament-choosable-chips)
@@ -7,7 +9,7 @@
 
 A FilamentPHP v5 form field that renders checkbox/radio options as dismissable, colorable, icon-bearing badge **chips**. The API is patterned after `Select`/`ToggleButtons`, so per-option labels, colors, and icons are supplied through the same fluent option map you already know. Each chip is a native Filament badge, so it inherits Filament's theme out of the box.
 
-![Choosable Chips](art/choosable-chips.png)
+![The Choosable Chips field in a Filament form](art/choosable-chips.png)
 
 ## Features
 
