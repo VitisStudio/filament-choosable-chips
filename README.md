@@ -174,21 +174,21 @@ ChoosableChips::make('status')
 
 ## API
 
-| Method | Description |
-| --- | --- |
-| `options(array \| Arrayable \| string \| Closure)` | The `value => label` option map (or an enum class string). |
-| `multiple(bool \| Closure = true)` | Switch to multi-select (checkbox) mode. Default is single-select. |
-| `colors(array \| Arrayable \| Closure)` | Per-option color map keyed by value (any Filament color token). |
-| `icons(array \| Arrayable \| Closure)` | Per-option icon map keyed by value (`Heroicon` or icon name). |
-| `descriptions(array \| Arrayable \| Closure)` | Per-option helper text keyed by value. |
-| `disableOptionWhen(Closure)` | Disable specific options; disabled chips can't be selected or removed. |
-| `dismissible(bool \| Closure = true)` | Show a × on selected chips to clear them. Enabled by default, but suppressed while the selected check is shown. |
-| `checkSelected(bool \| Closure = true)` | Prepend a check mark to selected chips. Auto-on when no `icons()` are set. |
-| `selectedColor(string \| Closure \| null)` | Color of the selection check. Defaults to `success`. |
-| `checkIcon(string \| BackedEnum \| Closure)` | Icon used to mark selected chips. Defaults to a check mark. |
-| `size(Size \| string \| Closure)` | Badge size (`Size` enum or its string value, e.g. `'sm'`). |
-| `defaultColor(string \| Closure \| null)` | Color used for options with no explicit color. Defaults to `primary`. |
-| `gridDirection(GridDirection \| string \| Closure)` | Lay chips out by column (default) or row. |
+| Method                                              | Description                                                                                                     |
+| --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `options(array \| Arrayable \| string \| Closure)`  | The `value => label` option map (or an enum class string).                                                      |
+| `multiple(bool \| Closure = true)`                  | Switch to multi-select (checkbox) mode. Default is single-select.                                               |
+| `colors(array \| Arrayable \| Closure)`             | Per-option color map keyed by value (any Filament color token).                                                 |
+| `icons(array \| Arrayable \| Closure)`              | Per-option icon map keyed by value (`Heroicon` or icon name).                                                   |
+| `descriptions(array \| Arrayable \| Closure)`       | Per-option helper text keyed by value.                                                                          |
+| `disableOptionWhen(Closure)`                        | Disable specific options; disabled chips can't be selected or removed.                                          |
+| `dismissible(bool \| Closure = true)`               | Show a × on selected chips to clear them. Enabled by default, but suppressed while the selected check is shown. |
+| `checkSelected(bool \| Closure = true)`             | Prepend a check mark to selected chips. Auto-on when no `icons()` are set.                                      |
+| `selectedColor(string \| Closure \| null)`          | Color of the selection check. Defaults to `success`.                                                            |
+| `checkIcon(string \| BackedEnum \| Closure)`        | Icon used to mark selected chips. Defaults to a check mark.                                                     |
+| `size(Size \| string \| Closure)`                   | Badge size (`Size` enum or its string value, e.g. `'sm'`).                                                      |
+| `defaultColor(string \| Closure \| null)`           | Color used for options with no explicit color. Defaults to `primary`.                                           |
+| `gridDirection(GridDirection \| string \| Closure)` | Lay chips out by column (default) or row.                                                                       |
 
 ## Publishing the views
 
