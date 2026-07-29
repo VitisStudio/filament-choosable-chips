@@ -9,7 +9,6 @@ use Filament\Forms\FormsServiceProvider;
 use Filament\Infolists\InfolistsServiceProvider;
 use Filament\Schemas\SchemasServiceProvider;
 use Filament\Support\SupportServiceProvider;
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Livewire\Mechanisms\DataStore;
 use Orchestra\Testbench\TestCase as Orchestra;
@@ -20,10 +19,6 @@ class TestCase extends Orchestra
     protected function setUp(): void
     {
         parent::setUp();
-
-        Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'VitisStudio\\FilamentChoosableChips\\Database\\Factories\\'.class_basename($modelName).'Factory'
-        );
 
         view()->addNamespace('choosable-chips-tests', __DIR__.'/Fixtures/views');
 
@@ -61,11 +56,5 @@ class TestCase extends Orchestra
         // @js() payloads, both of which need an application key. Testbench does not
         // provide one by default, so set a deterministic key for the test run.
         config()->set('app.key', 'base64:'.base64_encode(random_bytes(32)));
-
-        /*
-         foreach (\Illuminate\Support\Facades\File::allFiles(__DIR__ . '/../database/migrations') as $migration) {
-            (include $migration->getRealPath())->up();
-         }
-         */
     }
 }

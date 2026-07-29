@@ -37,8 +37,7 @@
     },
     "autoload": {
         "psr-4": {
-            "VitisStudio\\FilamentChoosableChips\\": "src/",
-            "VitisStudio\\FilamentChoosableChips\\Database\\Factories\\": "database/factories/"
+            "VitisStudio\\FilamentChoosableChips\\": "src/"
         }
     },
     "autoload-dev": {
@@ -83,10 +82,7 @@
         "laravel": {
             "providers": [
                 "VitisStudio\\FilamentChoosableChips\\FilamentChoosableChipsServiceProvider"
-            ],
-            "aliases": {
-                "FilamentChoosableChips": "VitisStudio\\FilamentChoosableChips\\Facades\\FilamentChoosableChips"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",

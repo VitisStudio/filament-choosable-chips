@@ -34,9 +34,6 @@ class ChoosableChips extends Field implements Contracts\CanDisableOptions
     use Concerns\HasOptions;
     use Concerns\HasTooltips;
 
-    /**
-     * @var view-string
-     */
     protected string $view = 'filament-choosable-chips::components.choosable-chips';
 
     protected bool|Closure $isMultiple = false;
