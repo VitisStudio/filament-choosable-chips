@@ -2,8 +2,15 @@
     "name": "vitisstudio/filament-choosable-chips",
     "description": "A FilamentPHP v5 form field that renders checkbox/radio options as dismissable, colorable, icon-bearing badge chips with a fluent options API.",
     "keywords": [
-        "VitisStudio",
+        "vitisstudio",
         "laravel",
+        "filament",
+        "filamentphp",
+        "filament-plugin",
+        "forms",
+        "form-field",
+        "chips",
+        "badges",
         "filament-choosable-chips"
     ],
     "homepage": "https://github.com/vitisstudio/filament-choosable-chips",
@@ -22,7 +29,6 @@
         "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
-        "filament/blueprint": "^2.2",
         "larastan/larastan": "^3.0",
         "laravel/boost": "^2.4",
         "laravel/pint": "^1.14",
@@ -61,9 +67,12 @@
         "format": "vendor/bin/pint",
         "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
         "build": "@php vendor/bin/testbench workbench:build --ansi",
+        "build-preview-theme": "npx @tailwindcss/cli -i workbench/resources/css/theme.css -o vendor/orchestra/testbench-core/laravel/public/css/preview/theme.css --minify",
         "serve": [
             "Composer\\Config::disableProcessTimeout",
             "@build",
+            "@php vendor/bin/testbench filament:assets --ansi",
+            "@build-preview-theme",
             "@php vendor/bin/testbench serve --ansi"
         ],
         "lint": [
@@ -86,12 +95,5 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "name": "filament",
-            "type": "composer",
-            "url": "https://packages.filamentphp.com/composer"
-        }
-    ]
+    "prefer-stable": true
 }
