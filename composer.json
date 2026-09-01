@@ -2,8 +2,15 @@
     "name": "vitisstudio/filament-choosable-chips",
     "description": "A FilamentPHP v5 form field that renders checkbox/radio options as dismissable, colorable, icon-bearing badge chips with a fluent options API.",
     "keywords": [
-        "VitisStudio",
+        "vitisstudio",
         "laravel",
+        "filament",
+        "filamentphp",
+        "filament-plugin",
+        "forms",
+        "form-field",
+        "chips",
+        "badges",
         "filament-choosable-chips"
     ],
     "homepage": "https://github.com/vitisstudio/filament-choosable-chips",
