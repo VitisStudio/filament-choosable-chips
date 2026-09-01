@@ -67,9 +67,12 @@
         "format": "vendor/bin/pint",
         "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
         "build": "@php vendor/bin/testbench workbench:build --ansi",
+        "build-preview-theme": "npx @tailwindcss/cli -i workbench/resources/css/theme.css -o vendor/orchestra/testbench-core/laravel/public/css/preview/theme.css --minify",
         "serve": [
             "Composer\\Config::disableProcessTimeout",
             "@build",
+            "@php vendor/bin/testbench filament:assets --ansi",
+            "@build-preview-theme",
             "@php vendor/bin/testbench serve --ansi"
         ],
         "lint": [
