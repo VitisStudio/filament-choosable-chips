@@ -1,6 +1,8 @@
 # Choosable Chips for Filament
 
-![Choosable Chips for Filament](art/hero.jpeg)
+<a href="https://github.com/vitisstudio/filament-choosable-chips" class="filament-hidden">
+<img style="width: 100%; max-width: 100%;" alt="Choosable Chips for Filament" src="https://raw.githubusercontent.com/vitisstudio/filament-choosable-chips/main/art/hero.jpeg">
+</a>
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/vitisstudio/filament-choosable-chips.svg?style=flat-square)](https://packagist.org/packages/vitisstudio/filament-choosable-chips)
 [![Tests](https://img.shields.io/github/actions/workflow/status/vitisstudio/filament-choosable-chips/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/vitisstudio/filament-choosable-chips/actions/workflows/run-tests.yml)
@@ -9,7 +11,7 @@
 
 A FilamentPHP v5 form field that renders checkbox/radio options as dismissable, colorable, icon-bearing badge **chips**. The API is patterned after `Select`/`ToggleButtons`, so per-option labels, colors, and icons are supplied through the same fluent option map you already know. Each chip is a native Filament badge, so it inherits Filament's theme out of the box.
 
-![The Choosable Chips field in a Filament form](art/choosable-chips.png)
+![The Choosable Chips field in a Filament form](https://raw.githubusercontent.com/vitisstudio/filament-choosable-chips/main/art/choosable-chips.png)
 
 ## Features
 
@@ -69,7 +71,7 @@ ChoosableChips::make('color')
     ]);
 ```
 
-![Single select](art/single-select.png)
+![Single select](https://raw.githubusercontent.com/vitisstudio/filament-choosable-chips/main/art/single-select.png)
 
 ### Multiple selection
 
@@ -94,7 +96,7 @@ ChoosableChips::make('tags')
     ]);
 ```
 
-![Multiple select](art/multi-select.png)
+![Multiple select](https://raw.githubusercontent.com/vitisstudio/filament-choosable-chips/main/art/multi-select.png)
 
 ### Icons and disabled options
 
@@ -119,7 +121,7 @@ ChoosableChips::make('plan')
     ->disableOptionWhen(fn (string $value): bool => $value === 'enterprise');
 ```
 
-![Icons and a disabled option](art/icons-disabled.png)
+![Icons and a disabled option](https://raw.githubusercontent.com/vitisstudio/filament-choosable-chips/main/art/icons-disabled.png)
 
 ### Check on selected
 
@@ -137,7 +139,7 @@ ChoosableChips::make('sizes')
     ]);
 ```
 
-![Check on selected](art/check-selected.png)
+![Check on selected](https://raw.githubusercontent.com/vitisstudio/filament-choosable-chips/main/art/check-selected.png)
 
 ### Sizes
 
@@ -159,9 +161,9 @@ use VitisStudio\FilamentChoosableChips\Forms\Components\ChoosableChips;
 ChoosableChips::configureUsing(fn (ChoosableChips $component) => $component->size('sm'));
 ```
 
-![Extra small chips](art/size-xs.png)
-![Small chips](art/size-sm.png)
-![Medium chips](art/size-md.png)
+![Extra small chips](https://raw.githubusercontent.com/vitisstudio/filament-choosable-chips/main/art/size-xs.png)
+![Small chips](https://raw.githubusercontent.com/vitisstudio/filament-choosable-chips/main/art/size-sm.png)
+![Medium chips](https://raw.githubusercontent.com/vitisstudio/filament-choosable-chips/main/art/size-md.png)
 
 ### Enums
 
