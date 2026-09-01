@@ -1,6 +1,8 @@
 # Choosable Chips for Filament
 
-![Choosable Chips for Filament](https://raw.githubusercontent.com/vitisstudio/filament-choosable-chips/main/art/hero.jpeg)
+<a href="https://github.com/vitisstudio/filament-choosable-chips" class="filament-hidden">
+<img style="width: 100%; max-width: 100%;" alt="Choosable Chips for Filament" src="https://raw.githubusercontent.com/vitisstudio/filament-choosable-chips/main/art/hero.jpeg">
+</a>
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/vitisstudio/filament-choosable-chips.svg?style=flat-square)](https://packagist.org/packages/vitisstudio/filament-choosable-chips)
 [![Tests](https://img.shields.io/github/actions/workflow/status/vitisstudio/filament-choosable-chips/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/vitisstudio/filament-choosable-chips/actions/workflows/run-tests.yml)
