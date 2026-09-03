@@ -240,7 +240,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability, please email dan@vitis.studio rather than using the issue tracker.
+Please see [our security policy](https://github.com/vitisstudio/filament-choosable-chips/blob/main/SECURITY.md) for how to report security vulnerabilities.
 
 ## Credits
 
